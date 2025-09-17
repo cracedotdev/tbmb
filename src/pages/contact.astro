@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl font-script text-brown text-center mb-8">Contact Me</h2>
+            <p class="text-center font-serif text-brown/90 mb-10">
+                Questions or custom orders? Drop me a message here — I’ll get back to you soon.
+            </p>
+
+            <form
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                    action="/thank-you"
+                    class="bg-cream rounded-2xl shadow-xl p-8 space-y-6"
+            >
+                <!-- Required hidden input for Netlify -->
+                <input type="hidden" name="form-name" value="contact" />
+
+                <div>
+                    <label class="block font-serif mb-1 text-brown">Name</label>
+                    <input
+                            type="text"
+                            name="name"
+                            required
+                            class="w-full rounded-lg border border-brown/30 p-3 focus:ring-2 focus:ring-rose"
+                    />
+                </div>
+
+                <div>
+                    <label class="block font-serif mb-1 text-brown">Email</label>
+                    <input
+                            type="email"
+                            name="email"
+                            required
+                            class="w-full rounded-lg border border-brown/30 p-3 focus:ring-2 focus:ring-rose"
+                    />
+                </div>
+
+                <div>
+                    <label class="block font-serif mb-1 text-brown">Message</label>
+                    <textarea
+                            name="message"
+                            rows="5"
+                            required
+                            class="w-full rounded-lg border border-brown/30 p-3 focus:ring-2 focus:ring-rose"
+                    ></textarea>
+                </div>
+
+                <button
+                        type="submit"
+                        class="bg-mint text-brown px-6 py-3 rounded-full font-serif shadow hover:bg-rose transition"
+                >
+                    Send
+                </button>
+            </form>
+        </div>
+    </section>
+</Layout>
