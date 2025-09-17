@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cookies">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-4xl mx-auto">
+            <header class="text-center mb-8">
+                <h2 class="text-5xl font-script text-brown">Cookies</h2>
+                <p class="font-serif text-brown/90 mt-2">$3 each · $30 per dozen</p>
+            </header>
+
+            <ul class="grid gap-6 md:grid-cols-2 bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40">
+                <li><h3 class="font-script text-2xl">Double Chocolate Chip</h3><p class="font-serif">Soft cookie with a generous amount of milk and white chocolate chips.</p></li>
+                <li><h3 class="font-script text-2xl">Triple Chocolate</h3><p class="font-serif">Decadent chocolate base with semi-sweet chunks and white chocolate chips.</p></li>
+                <li><h3 class="font-script text-2xl">Frosted Sugar Cookie</h3><p class="font-serif">Soft sugar cookie topped with buttercream frosting. <span class="text-brown/70">Customization available.</span></p></li>
+                <li><h3 class="font-script text-2xl">Brown Butter Caramel Snickerdoodle</h3><p class="font-serif">Rich brown-butter snickerdoodle stuffed with salted caramel and rolled in cinnamon sugar.</p></li>
+                <li><h3 class="font-script text-2xl">S’mores</h3><p class="font-serif">Graham-cracker chocolate-chip cookie stuffed with melty marshmallows and Hershey pieces.</p></li>
+                <li><h3 class="font-script text-2xl">Kitchen Sink</h3><p class="font-serif">Semi-sweet & milk chocolate chips, caramel pieces, and pretzels.</p></li>
+                <li><h3 class="font-script text-2xl">White Chocolate Macadamia Nut</h3><p class="font-serif">Soft cookie with white-chocolate chips and macadamia pieces.</p></li>
+                <li class="md:col-span-2"><h3 class="font-script text-2xl">Oatmeal Cream Pies</h3><p class="font-serif">Chewy oatmeal cookies sandwiched around fluffy marshmallow cream filling.</p></li>
+            </ul>
+
+            <div class="mt-8">
+                <a href="/menu" class="inline-block bg-mint text-brown px-5 py-2 rounded-full font-serif shadow hover:bg-rose transition">Back to Menu</a>
+            </div>
+        </div>
+    </section>
+</Layout>

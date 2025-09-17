@@ -1,0 +1,91 @@
+---
+/** Global site layout. Usage:
+    *  import Layout from '../layouts/Layout.astro';
+    *  <Layout title="Page Title"> ... </Layout>
+    */
+const { title = 'The Busy Mama Bakery' } = Astro.props;
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
+    <!-- Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- Tailwind (your project’s global stylesheet) -->
+    <link rel="stylesheet" href="/src/styles/global.css" />
+
+    <!-- Icons -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+</head>
+
+<body class="bg-cream text-brown font-serif min-h-screen flex flex-col">
+<header class="bg-blush p-4 shadow-md text-center border-b-2 border-rose/20">
+    <div class="max-w-4xl mx-auto flex items-center justify-center">
+        <i class="fas fa-cookie text-brown mr-3 text-xl hidden md:block"></i>
+        <h1 class="text-2xl md:text-3xl font-script text-brown">The Busy Mama Bakery</h1>
+        <i class="fas fa-cookie text-brown ml-3 text-xl hidden md:block"></i>
+    </div>
+</header>
+
+<nav class="bg-peach py-3 px-4 md:px-6 border-t border-brown/20 shadow-sm overflow-x-auto">
+    <ul class="flex justify-start md:justify-center space-x-6 md:space-x-10 text-base md:text-lg whitespace-nowrap">
+        <li>
+            <a href="/" class="text-brown hover:text-rose transition font-medium relative group">
+                Home
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </li>
+        <li>
+            <a href="/menu" class="text-brown hover:text-rose transition font-medium relative group">
+                Menu
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </li>
+        <li>
+            <a href="/gallery" class="text-brown hover:text-rose transition font-medium relative group">
+                Gallery
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </li>
+        <li>
+            <a href="/about" class="text-brown hover:text-rose transition font-medium relative group">
+                About
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </li>
+        <li>
+            <a href="/contact" class="text-brown hover:text-rose transition font-medium relative group">
+                Contact
+                <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-rose group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main class="flex-1 flex flex-col">
+    <slot />
+</main>
+
+<footer class="bg-blush shadow-md text-center p-4 text-brown font-serif border-t border-rose/20">
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-center space-x-4 mb-3">
+            <a href="#" class="text-brown hover:text-rose transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-brown hover:text-rose transition"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-brown hover:text-rose transition"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <p class="text-sm md:text-base">
+            © {new Date().getFullYear()} The Busy Mama Bakery. Baked with 💕.
+        </p>
+    </div>
+</footer>
+</body>
+</html>

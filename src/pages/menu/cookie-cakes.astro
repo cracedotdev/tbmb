@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cookie Cakes">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl font-script text-brown text-center mb-8">Cookie Cakes</h2>
+
+            <div class="bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40 ">
+                <p class="font-serif mb-2">Choose between: chocolate chip, M&M, sugar-cookie.</p>
+                <p class="font-serif">Topped with American buttercream. Customize theme, colors, decorations.</p>
+
+                <div class="grid gap-6 md:grid-cols-2 mt-6">
+                    <div>
+                        <h3 class="font-script text-2xl">Single-layer</h3>
+                        <ul class="font-serif mt-2 space-y-1">
+                            <li>12”×8” small — <span class="font-semibold">$40.00</span></li>
+                            <li>17”×12” large — <span class="font-semibold">$55.00</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-script text-2xl">Two-layer (with buttercream between)</h3>
+                        <ul class="font-serif mt-2 space-y-1">
+                            <li>Small — <span class="font-semibold">$52.00</span></li>
+                            <li>Large — <span class="font-semibold">$86.00</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <a href="/menu" class="inline-block bg-mint text-brown px-5 py-2 rounded-full font-serif shadow hover:bg-rose transition">Back to Menu</a>
+            </div>
+        </div>
+    </section>
+</Layout>

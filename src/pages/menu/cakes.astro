@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cakes">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-script text-brown text-center mb-8">Cakes</h2>
+
+            <!-- Sheet Cakes -->
+            <article class="bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40 mb-8">
+                <h3 class="font-script text-3xl mb-2">Sheet Cakes</h3>
+                <ul class="list-disc list-inside font-serif space-y-1">
+                    <li>$50 quarter sheet · $95 half sheet</li>
+                    <li>Layered with filling: $60 quarter sheet · $110 half sheet</li>
+                </ul>
+                <div class="grid gap-2 md:grid-cols-3 mt-4">
+                    <p class="font-serif"><span class="font-semibold">Flavors:</span> vanilla, chocolate, red velvet, carrot, spice, funfetti, strawberry, white, marble.</p>
+                    <p class="font-serif"><span class="font-semibold">Your choice of frosting</span></p>
+                    <p class="font-serif"><span class="font-semibold">Your choice of fillings</span></p>
+                </div>
+            </article>
+
+            <!-- Round Cakes -->
+            <article class="bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40 mb-8">
+                <h3 class="font-script text-3xl mb-4">Round Cakes</h3>
+                <p class="font-serif text-brown/90 mb-4">Includes frosting and filling of choice.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left font-serif">
+                        <thead>
+                        <tr class="text-brown">
+                            <th class="py-2 pr-4">Size</th>
+                            <th class="py-2 pr-4">Single</th>
+                            <th class="py-2 pr-4">2-Layer</th>
+                            <th class="py-2 pr-4">3-Layer</th>
+                            <th class="py-2">4-Layer</th>
+                        </tr>
+                        </thead>
+                        <tbody class="align-top">
+                        <tr><td class="py-1 pr-4">6”</td><td class="py-1 pr-4">$23</td><td class="py-1 pr-4">$35</td><td class="py-1 pr-4">$66</td><td class="py-1">$88</td></tr>
+                        <tr><td class="py-1 pr-4">8”</td><td class="py-1 pr-4">$27</td><td class="py-1 pr-4">$42</td><td class="py-1 pr-4">$75</td><td class="py-1">$98</td></tr>
+                        <tr><td class="py-1 pr-4">10”</td><td class="py-1 pr-4">$30</td><td class="py-1 pr-4">$56</td><td class="py-1 pr-4">$83</td><td class="py-1">$110</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="font-serif text-brown/80 mt-4">Customization available — additional charges may apply.</p>
+            </article>
+
+            <div class="mt-8">
+                <a href="/menu" class="inline-block bg-mint text-brown px-5 py-2 rounded-full font-serif shadow hover:bg-rose transition">Back to Menu</a>
+            </div>
+        </div>
+    </section>
+</Layout>

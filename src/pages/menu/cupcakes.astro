@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Cupcakes">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-script text-brown text-center mb-8">Cupcakes</h2>
+
+            <div class="space-y-8">
+                <article class="bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40">
+                    <h3 class="font-script text-3xl mb-1">Classic Cupcakes</h3>
+                    <p class="font-serif text-brown/90 mb-4">$26 per dozen</p>
+                    <h4 class="font-serif font-semibold">Flavors</h4>
+                    <p class="font-serif mb-2">Vanilla, chocolate, red velvet, carrot, spice, funfetti, strawberry, white.</p>
+                    <h4 class="font-serif font-semibold">Your choice of frosting</h4>
+                </article>
+
+                <article class="bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40">
+                    <h3 class="font-script text-3xl mb-1">Premium Cupcakes</h3>
+                    <p class="font-serif text-brown/90 mb-4">$35 per dozen</p>
+                    <p class="font-serif">Choose from classic flavors and frosting and add filling and toppings.</p>
+                    <h4 class="font-serif font-semibold mt-4">Your choice of filling</h4>
+                    <h4 class="font-serif font-semibold mt-2">Toppings</h4>
+                    <p class="font-serif">Candy, chocolate shavings, sprinkles, nuts.</p>
+                    <p class="font-serif text-brown/80 mt-4">Customization available — additional charges may apply.</p>
+                </article>
+            </div>
+
+            <div class="mt-8">
+                <a href="/menu" class="inline-block bg-mint text-brown px-5 py-2 rounded-full font-serif shadow hover:bg-rose transition">Back to Menu</a>
+            </div>
+        </div>
+    </section>
+</Layout>

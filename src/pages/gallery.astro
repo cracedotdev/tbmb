@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Import all images from assets except astro.svg and background.svg
+import beeCookies from '../assets/bee_cookies.jpeg';
+import berryCupcakes from '../assets/berry_cupcakes.jpeg';
+import cactusCupcakes from '../assets/cactus_cupcakes.jpg';
+import carmelMacaron from '../assets/carmel_macaron.jpeg';
+import chocolatePbMacaroons from '../assets/chocolate_pb_macaroons.jpeg';
+import circusCookieCupcakes from '../assets/circus_cookie_cupcakes.jpeg';
+import gingerCookieCupcake from '../assets/ginger_cookie_cupcake.jpeg';
+import lemonCake from '../assets/lemon_cake.jpeg';
+import pbCake from '../assets/pb_cake.jpg';
+import rainbowSprinkleCake from '../assets/rainbow_sprinkle_cake.jpeg';
+import scone from '../assets/scone.jpeg';
+import unicornCake from '../assets/unicorn_cake.JPG';
+import valentineCupcakeBox from '../assets/valentine_cupcake_box.jpg';
+
+const images = [
+  { src: beeCookies.src, alt: 'Bee sugar cookies' },
+  { src: berryCupcakes.src, alt: 'Berry cupcakes' },
+  { src: cactusCupcakes.src, alt: 'Cactus cupcakes' },
+  { src: carmelMacaron.src, alt: 'Caramel macaron' },
+  { src: chocolatePbMacaroons.src, alt: 'Chocolate peanut butter macaroons' },
+  { src: circusCookieCupcakes.src, alt: 'Circus cookie cupcakes' },
+  { src: gingerCookieCupcake.src, alt: 'Ginger cookie cupcake' },
+  { src: lemonCake.src, alt: 'Lemon cake' },
+  { src: pbCake.src, alt: "Peanut butter chocolate drip cake with Reese’s cups" },
+  { src: rainbowSprinkleCake.src, alt: 'Rainbow sprinkle cake' },
+  { src: scone.src, alt: 'Scone' },
+  { src: unicornCake.src, alt: 'Unicorn cake' },
+  { src: valentineCupcakeBox.src, alt: 'Valentine cupcake box' },
+];
+---
+
+<Layout title="Gallery">
+  <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-5xl font-script text-brown text-center mb-8">Gallery</h2>
+      <p class="text-center text-brown/90 font-serif mb-10">
+        View some of the delicious creations from our bakery.
+      </p>
+
+      <!-- Responsive grid, no JS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {images.map((img, i) => (
+          <a href={"#img-" + i} class="block group rounded-xl overflow-hidden shadow hover:shadow-lg transition">
+              <div class="aspect-square w-full">
+                  <img src={img.src} alt={img.alt} loading="lazy" class="w-full h-full object-cover group-hover:opacity-95"/>
+              </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- CSS-only lightbox using :target -->
+      {images.map((img, i) => (
+        <div id={"img-" + i} class="lightbox fixed inset-0 z-50 hidden">
+          <a href="#" class="absolute inset-0 bg-black/70"></a>
+          <div class="absolute inset-0 flex items-center justify-center p-4 pointer-events-none">
+            <img src={img.src} alt={img.alt} class="max-h-[85vh] max-w-[90vw] rounded-xl shadow-xl bg-cream pointer-events-auto"/>
+          </div>
+          <a href="#" class="absolute top-4 right-4 bg-blush/90 text-brown px-4 py-2 rounded-full font-serif shadow">Close</a>
+        </div>
+      ))}
+    </div>
+
+    <style>
+      /* Small, page-scoped CSS for the :target lightbox */
+      .lightbox:target { display: block; }
+    </style>
+  </section>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="French Macarons">
+    <section class="bg-gradient-to-b from-peach via-cream to-peach px-6 py-12 md:py-16">
+        <div class="max-w-4xl mx-auto">
+            <header class="text-center mb-8">
+                <h2 class="text-5xl font-script text-brown">French Macarons</h2>
+                <p class="font-serif text-brown/90 mt-2">$2.50 each · $25 per dozen · half/half boxes available</p>
+            </header>
+
+            <ul class="grid gap-6 md:grid-cols-2 bg-peach/60 rounded-2xl p-6 md:p-8 shadow-lg border border-rose/40">
+                <li><h3 class="font-script text-2xl">Classic</h3><p class="font-serif">Vanilla shell with vanilla buttercream.</p></li>
+                <li><h3 class="font-script text-2xl">Chocolate</h3><p class="font-serif">Chocolate shell with decadent chocolate ganache filling.</p></li>
+                <li><h3 class="font-script text-2xl">Salted Caramel</h3><p class="font-serif">Brown sugar shell with salted caramel buttercream.</p></li>
+                <li><h3 class="font-script text-2xl">Chocolate Peanut Butter</h3><p class="font-serif">Chocolate shell with creamy peanut-butter buttercream.</p></li>
+                <li><h3 class="font-script text-2xl">Strawberry</h3><p class="font-serif">Vanilla shell with strawberry buttercream and strawberry jam.</p></li>
+                <li><h3 class="font-script text-2xl">Raspberry</h3><p class="font-serif">Vanilla shell with white-chocolate ganache and raspberry jam.</p></li>
+                <li><h3 class="font-script text-2xl">Honey Almond</h3><p class="font-serif">Almond shell with honey-almond buttercream.</p></li>
+                <li><h3 class="font-script text-2xl">Strawberry Cheesecake</h3><p class="font-serif">Vanilla shell with cheesecake filling and strawberry jam.</p></li>
+                <li class="md:col-span-2"><h3 class="font-script text-2xl">Lemon</h3><p class="font-serif">Lemon shell with sweet buttercream and tangy lemon curd.</p></li>
+            </ul>
+
+            <div class="mt-8">
+                <a href="/menu" class="inline-block bg-mint text-brown px-5 py-2 rounded-full font-serif shadow hover:bg-rose transition">Back to Menu</a>
+            </div>
+        </div>
+    </section>
+</Layout>
