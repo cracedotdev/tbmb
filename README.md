@@ -16,5 +16,7 @@ npm run dev
 # 3) Build for production
 npm run build
 # → outputs to ./dist
+```
+
 
 Built with AstroJS and ChatGPT ❤️🤖
